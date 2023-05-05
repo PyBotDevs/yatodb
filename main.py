@@ -3,6 +3,7 @@ import discord
 import json
 import time
 import os, os.path
+import utils.auth
 from random import choice
 from discord import ApplicationContext, option
 from discord.ext import commands
@@ -13,12 +14,10 @@ start_time = round(time.time())
 if os.name == "nt":
     with open(f"{os.getcwd()}\\config\\truth.json", 'r') as f: truth_questions = json.load(f)
     with open(f"{os.getcwd()}\\config\\dare.json", 'r') as f: dare_questions = json.load(f)
-    with open(f"{os.getcwd()}\\config\\startup.json", 'r') as f: config = json.load(f)
 else:
     with open("config/truth.json", 'r') as f: truth_questions = json.load(f)
     with open("config/dare.json", 'r') as f: dare_questions = json.load(f)
-    with open("config/startup.json", 'r') as f: config = json.load(f)
-owner_id = int(config["extra_metadata"]["owner_id"])
+owner_id = utils.auth.get_owner_id()
 
 # Events
 @client.event
@@ -89,7 +88,7 @@ async def suggest(ctx: ApplicationContext, mode: str, question: str):
     await ctx.respond(embed=discord.Embed(description="Your suggestion has been sent!", color=discord.Color.green()), ephemeral=True)
 
 # Client Initialization
-client.run(config["auth"]["token"])
+client.run(utils.auth.get_token())
 
 
 
