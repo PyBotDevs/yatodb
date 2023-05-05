@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "yatodb"
+version = "0.1.0"
+description = ""
+authors = ["snipe_blaze <72265661+notsniped@users.noreply.github.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+py-cord = "^2.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
