@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>YAToDB</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <noscript>This app requires JavaScript to function. Please enable it in your browser settings.</noscript>
+    <body>
+        <div id="top-nav-bar">
+            <label id="title">YAToDB</label>
+            <label class="nav-item" id="invite-rd" onclick="rd('invite')">Add to Server</label>
+            <label class="nav-item" id="github-rd" onclick="rd('git')">Repository</label>
+            <label class="nav-item" id="commands-list-rd" onclick="rd('commands')">Commands</label>
+            <label class="nav-item" id="changelog-rd" onclick="rd('changelog')">Changelog</label>
+            <label class="nav-item" id="discord-rd" onclick="rd('server')">Discord Server</label>
+        </div>
+        <br><br><br>
+        <center>
+            <div id="page-content-container">
+                <div class="item-card" id="heading-card">
+                    <label id="title">Yet Another Truth or Dare Bot</label>
+                    <br>
+                    <label class="jap" id="jap-title">さらにもう一つの真実か挑戦かボット</label>
+                    <div class="separator"></div>
+                    <p id="subtitle">YAToDB is a simple, fast and efficient Truth or Dare Discord bot.<br>You can play ToD and other upcoming game modes with your friends in pretty much any Discord server you want.</p>
+                    <button id="invite-button" onclick="rd('invite')">Add To Your Discord Server!</button>
+                </div>
+                <br>
+                <div class="item-card" id="why-to-use-card">
+                    <label id="title">Why YAToDB?<br><div class="separator"></div></label>
+                    <br>
+                    <label class="subtitle">> Simple</label>
+                    <p>
+                        YAToDB is developed only with Truth and Dare in mind, and nothing else.
+                        There are no extra commands, and all commands are built to be simple, easy-to-use and uncomplex.
+                    </p>
+                    <br>
+                    <label class="subtitle">> Fast</label>
+                    <p>
+                        YAToDB is developed with the PyCord library, which provides fast access to the <label class="discord-highlight">Discord API</label> and provides the bot with the latest and greatest Discord features.
+                    </p>
+                    <br>
+                    <label class="subtitle">> Efficient</label>
+                    <p>
+                        YAToDB is made in <label class="python3-highlight">Python 3</label>, which means that YAToDB's back-end is reliable, stable and optimized for performance.
+                    </p>
+                    <br>
+                    <label class="subtitle">> Open Source</label>
+                    <p>
+                        YAToDB is worked on as an open-source project, using the GPL-3.0 license and its code available on <label class="github-highlight">GitHub</label>. This provides code security, reliability, and also allows you to develop and recommend new features for the bot.
+                    </p>
+                    <br>
+                    <label class="subtitle">> Free</label>
+                    <p>
+                        YAToDB is completely <label class="green-highlight">free</label>. The bot is completely free to use and we do not have any subscriptions. <b>As of now, <u>we also do not accept donations.</u></b>
+                    </p>
+                </div>
+                <br>
+                <div class="item-card" id="invite-card-end">
+                    <label id="title">Like What You See?</label>
+                    <br>
+                    <button id="invite-button" onclick="rd('invite')">Add To Your Discord Server!</button>
+                </div>
+            </div>
+        </center>
+        <div id="footer">YAToDB &copy; notsniped 2023-present | This page is open-source, licensed with GPL-3.0, and hosted on GitHub.</div>
+    </body>
+    <script src="main.js"></script>
+</html>
