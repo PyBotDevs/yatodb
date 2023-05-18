@@ -40,10 +40,7 @@ async def help(ctx: ApplicationContext):
     description="Get a truth-type question."
 )
 async def truth(ctx: ApplicationContext):
-    truth_parsed = list()
-    for question_id in truth_questions.keys():
-        truth_parsed.append(truth_questions[question_id])
-    print(truth_parsed)
+    truth_parsed = list(truth_questions["questions"])
     question = choice(truth_parsed)
     localembed = discord.Embed(
         title=f"Truth question by {ctx.author.display_name}", 
@@ -57,10 +54,7 @@ async def truth(ctx: ApplicationContext):
     description="Get a dare-type question."
 )
 async def dare(ctx: ApplicationContext):
-    dare_parsed = list()
-    for question_id in dare_questions.keys():
-        dare_parsed.append(dare_questions[question_id])
-    print(dare_parsed)
+    dare_parsed = list(dare_questions["questions"])
     question = choice(dare_parsed)
     localembed = discord.Embed(
         title=f"Dare question by {ctx.author.display_name}", 
