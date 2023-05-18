@@ -56,7 +56,7 @@ async def truth(ctx: ApplicationContext):
     name="dare",
     description="Get a dare-type question."
 )
-async def truth(ctx: ApplicationContext):
+async def dare(ctx: ApplicationContext):
     dare_parsed = list()
     for question_id in dare_questions.keys():
         dare_parsed.append(dare_questions[question_id])
