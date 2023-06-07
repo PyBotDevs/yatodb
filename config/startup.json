@@ -3,7 +3,7 @@
         "owner_id": ""
     },
     "auth": {
-        "token": "",
+        "token": null,
         "public_key": ""
     }
 }
