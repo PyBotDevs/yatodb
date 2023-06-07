@@ -4,6 +4,7 @@ import json
 import time
 import os, os.path
 import utils.auth
+import utils.ping
 from random import choice
 from discord import ApplicationContext, option
 from discord.ext import commands
@@ -24,6 +25,8 @@ owner_id = utils.auth.get_owner_id()
 async def on_ready():
     print(f"[client] Bot client successfully signed into API. ({round(time.time()) - start_time}ms)")
     print(f"[client] Logged in as \"{client.user.name}\".")
+    print("[utils/ping] Starting web pinging server...")
+    utils.ping.host()
 
 # Functions
 @client.slash_command(
