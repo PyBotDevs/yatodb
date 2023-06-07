@@ -15,6 +15,7 @@ else:
 # Functions
 def get_token() -> str:
     """Returns the bot token, if provided in the `startup.json` file."""
+    if config["auth"]["token"] == None: return os.environ["TOKEN"]
     return config["auth"]["token"]
 
 def get_public_key() -> str:
