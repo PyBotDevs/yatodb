@@ -68,18 +68,18 @@ async def dare(ctx: ApplicationContext):
 
 @client.slash_command(
     name="suggest",
-    description="Suggest a new truth or dare question for the bot."
+    description="Suggest a new feature, or truth or dare question for the bot."
 )
-@option(name="mode", description="What mode do you want to suggest this question for?", type=str, choices=["truth", "dare"])
-@option(name="question", description="What question do you want to suggest?", type=str)
-async def suggest(ctx: ApplicationContext, mode: str, question: str):
+@option(name="mode", description="What mode do you want to suggest this question for?", type=str, choices=["general", "truth", "dare"])
+@option(name="suggestion", description="What do you want to suggest?", type=str)
+async def suggest(ctx: ApplicationContext, mode: str, suggestion: str):
     owner_context: discord.User = await client.fetch_user(owner_id)
     embed1 = discord.Embed(
-        title="You Have A New Question Suggestion!",
+        title="You Have A New Suggestion!",
         color=discord.Color.blue()
     )
     embed1.add_field(name="Mode", value=mode, inline=True)
-    embed1.add_field(name="Question", value=question, inline=True)
+    embed1.add_field(name="Content", value=question, inline=True)
     embed1.add_field(name="Suggested by", value=ctx.author.display_name, inline=True)
     await owner_context.send(embed=embed1)
     await ctx.respond(embed=discord.Embed(description="Your suggestion has been sent!", color=discord.Color.green()), ephemeral=True)
