@@ -34,7 +34,7 @@ async def on_ready():
     description="View a list of all available commands."
 )
 async def help(ctx: ApplicationContext):
-    localembed = discord.Embed(title="Command Help List", description="The global bot prefix is `/`\n\n**/truth**: Gives you a truth type question\n**/dare**: Gives you a dare type question")
+    localembed = discord.Embed(title="Command Help List", description="The global bot prefix is `/`\n\n**/truth**: Gives you a truth type question\n**/dare**: Gives you a dare type question\n**/suggest**: Suggest a new feature, or truth or dare question for the bot.")
     localembed.set_footer(text=f"Requested by {ctx.author.name}")
     await ctx.respond(embed=localembed)
 
